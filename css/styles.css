@@ -5,6 +5,8 @@
   padding: 0;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
+  color: var(--dark);
+  line-height: 1.4;
 }
 
 
@@ -44,6 +46,10 @@
 .feather-search {
   width: 32px;
   height: 32px;
+}
+
+.feather-github, .feather-linkedin, .feather-twitter {
+  stroke: var(--dark);
 }
 
 .float-nav {
@@ -127,6 +133,7 @@
 .red-hover {
   transition: all .3s ease-in-out;
   transition-property: background, width, border-radius;
+  background: var(--white);
 }
 
 .red-hover:hover {
@@ -134,9 +141,122 @@
   background: var(--alt-red);
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 120px 12px;
+}
+
+.title {
+  font-size: var(--f-xxlarge);
+  max-width: 250px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: 600;
+  color: var(--red);
+  font-size: var(--f-xlarge);
+  margin-bottom: 34px;
+  text-align: center;
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+.description {
+  margin-bottom: 43px;
+  max-width: 350px;
+  font-size: var(--f-base);
+}
+
+.social-icons {
+  margin-bottom: 27px;
+  list-style: none;
+  display: flex;
+  width: 180px;
+  justify-content: space-evenly;
+}
+
+.social-link {
+  background: var(--white);
+  display: flex;
+  height: 42px;
+  width: 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-complete);
+  transition: background .3s ease-in-out;
+}
+
+.twitter:hover {
+  background: rgba(29, 161, 242, 30%)
+}
+
+.twitter:hover .feather-twitter {
+  stroke: #1DA1F2;
+}
+.linkedin:hover {
+  background: #bbcfe2;
+}
+
+.linkedin:hover .feather-linkedin {
+  stroke: #0e76a8;
+}
+
+.github:hover {
+  background: rgb(129, 129, 129);
+}
+
+.github:hover .feather-github {
+  stroke: var(--white);
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--red);
+  display: flex;
+  height: 48px;
+  padding: 0px 36px;
+  align-items: center;
+  border-radius: 24px;
+  border: solid var(--border) var(--red);
+  transition: background .3s ease-in-out;
+}
+
+.btn:hover {
+  background: var(--alt-red);
+}
+
 @media screen and (min-width: 720px) {
+  
+
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 450px;
+    height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 16%);
+    max-width: 360px;
+
+  }
+}
+
+@media screen and (min-width: 1120px) {
   .float-nav {
     bottom: 44px;
     right: 44px;
+  }
+  .header {
+    max-width: 460px;
+    padding-top: 80px;
   }
 }
