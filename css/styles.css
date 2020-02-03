@@ -48,8 +48,8 @@
 
 .float-nav {
   position: fixed;
-  bottom: 44px;
-  right: 44px;
+  bottom: 12px;
+  right: 12px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -132,4 +132,11 @@
 .red-hover:hover {
   cursor: pointer;
   background: var(--alt-red);
+}
+
+@media screen and (min-width: 720px) {
+  .float-nav {
+    bottom: 44px;
+    right: 44px;
+  }
 }
