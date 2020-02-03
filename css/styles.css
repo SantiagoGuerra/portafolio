@@ -6,3 +6,25 @@
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
+
+
+:root {
+  /* colors */
+  --white: #fff;
+  --blue: #1B9CFC;
+  --red: #FF3F34;
+  --dark: #1E272E;
+  --gray: #ACACAC;
+  --light: #E3E3E3;
+
+/* font size */
+  --f-xxlarge: 48px;
+  --f-xlarge: 28px;
+  --f-large: 22px;
+  --f-base: 18px;
+  --f-small: 16px;
+
+/* borders */
+  --border-size: 16px;
+  --border-complete: 50%;
+}
