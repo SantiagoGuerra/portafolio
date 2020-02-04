@@ -18,7 +18,7 @@
   --alt-red: rgba(255, 63, 52, 15%);
   --dark: #1E272E;
   --gray: #ACACAC;
-  --light: #E3E3E3;
+  --light: rgb(246, 246, 246);
 
 /* font size */
   --f-xxlarge: 48px;
@@ -50,6 +50,13 @@
 
 .feather-github, .feather-linkedin, .feather-twitter {
   stroke: var(--dark);
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .float-nav {
@@ -147,6 +154,7 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 120px 12px;
+  width: 100%;
 }
 
 .title {
@@ -233,20 +241,31 @@
   background: var(--alt-red);
 }
 
+.section {
+  background: var(--light);
+  height: 100vh;
+  width: 100%;
+}
+
 @media screen and (min-width: 720px) {
   
+  .main {
+    flex-direction: row;
+  }
 
   .header {
     position: fixed;
     left: 0;
     top: 0;
-    width: 450px;
     height: 100vh;
     padding-top: 100px;
     padding-bottom: 0px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 16%);
     max-width: 360px;
+  }
 
+  .section {
+    margin-left: 360px;
   }
 }
 
@@ -258,5 +277,8 @@
   .header {
     max-width: 460px;
     padding-top: 80px;
+  }
+  .section {
+    margin-left: 460px;
   }
 }
