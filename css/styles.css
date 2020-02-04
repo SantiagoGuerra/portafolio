@@ -17,7 +17,7 @@
   --red: #FF3F34;
   --alt-red: rgba(255, 63, 52, 15%);
   --dark: #1E272E;
-  --gray: #ACACAC;
+  --gray: rgb(218, 218, 218);
   --light: rgb(246, 246, 246);
 
 /* font size */
@@ -52,6 +52,10 @@
   stroke: var(--dark);
 }
 
+.feather-chevron-right {
+  stroke: rgb(167, 167, 167);
+}
+
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +72,7 @@
   flex-wrap: wrap;
   align-items: flex-end;
   overflow: hidden;
+  z-index: 9999;
 }
 
 .navigation {
@@ -145,7 +150,6 @@
 
 .red-hover:hover {
   cursor: pointer;
-  background: var(--alt-red);
 }
 
 .header {
@@ -244,7 +248,91 @@
 .section {
   background: var(--light);
   height: 100vh;
+  padding: 12px;
+}
+
+.card {
   width: 100%;
+  height: 240px;
+  border: solid var(--border) var(--gray);
+  border-radius: var(--border-size);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -10;
+}
+
+.card:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 10%);
+}
+
+.card:hover .card-description{
+  top: 0
+}
+
+.card-description {
+  z-index: 999;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  transition: top .3s ease-in-out;
+  top: 100%
+}
+
+.card-content {
+  padding: 25px;
+  padding-top: 40px;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: var(--f-large);
+  color: var(--red);
+  line-height: 24px;
+}
+
+.card-subtitle {
+  font-weight: 600;
+  font-size: var(--f-small);
+  margin-bottom: 5px;
+  line-height: 24px;
+}
+
+.card-text {
+  font-size: var(--f-small);
+}
+
+.card-extra {
+  border-top: .5px solid var(--gray);
+  background: rgb(250, 250, 250);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-extra__link {
+  color: rgb(167, 167, 167);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.card-extra__link:hover {
+  color: var(--red)
+}
+
+.card-extra__link:hover .feather-chevron-right{
+  stroke: var(--red)
 }
 
 @media screen and (min-width: 720px) {
@@ -260,12 +348,13 @@
     height: 100vh;
     padding-top: 100px;
     padding-bottom: 0px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 16%);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 10%);
     max-width: 360px;
   }
 
   .section {
     margin-left: 360px;
+    overflow-y: scroll;
   }
 }
 
@@ -280,5 +369,13 @@
   }
   .section {
     margin-left: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 24px 62px;
+    justify-content: space-between;
+  }
+  .card {
+    width: 360px;
   }
 }
