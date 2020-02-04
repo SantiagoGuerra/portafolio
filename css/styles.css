@@ -335,6 +335,17 @@
   stroke: var(--red)
 }
 
+.message {
+  margin-top: 60px;
+}
+
+.message > h2 {
+  font-size: 32px;
+  color: rgb(170, 170, 170)
+}
+
+.message > p { color: #ccc}
+
 @media screen and (min-width: 720px) {
   
   .main {
