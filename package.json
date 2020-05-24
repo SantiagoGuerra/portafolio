@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/SantiagoGuerra/portafolio/issues"
   },
-  "homepage": "https://github.com/SantiagoGuerra/portafolio#readme"
+  "homepage": "https://github.com/SantiagoGuerra/portafolio#readme",
+  "devDependencies": {
+    "eslint": "^7.1.0"
+  }
 }
