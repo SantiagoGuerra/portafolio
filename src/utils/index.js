@@ -1,4 +1,4 @@
-const elementFromString = string => {
+export const elementFromString = string => {
   const element = document.createElement('div');
   element.innerHTML = string;
 
