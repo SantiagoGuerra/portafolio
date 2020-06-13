@@ -222,6 +222,14 @@ p, span, a {
   text-decoration: none;
 }
 
+.social-link:hover {
+  background: var(--alt-red);
+}
+
+.social-link:hover .ri-icon::before{
+  color: var(--red);
+}
+
 .twitter:hover {
   background: rgba(29, 161, 242, 30%)
 }
@@ -245,6 +253,7 @@ p, span, a {
 
 .github:hover .ri-github-line::before {
   stroke: var(--white);
+  color: var(--white);
 }
 
 .btn {
