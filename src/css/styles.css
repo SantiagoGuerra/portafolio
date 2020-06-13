@@ -42,6 +42,13 @@
   fill: none;
 }
 
+.ri-icon, .ri-icon::before{
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--dark);
+  
+}
+
 .feather-search {
   width: 32px;
   height: 32px;
@@ -203,28 +210,31 @@
   align-items: center;
   border-radius: var(--border-complete);
   transition: background .3s ease-in-out;
+  text-decoration: none;
 }
 
 .twitter:hover {
   background: rgba(29, 161, 242, 30%)
 }
 
-.twitter:hover .feather-twitter {
+.twitter:hover .ri-twitter-line::before {
   stroke: #1DA1F2;
+  color: #1DA1F2;
 }
 .linkedin:hover {
   background: #bbcfe2;
 }
 
-.linkedin:hover .feather-linkedin {
+.linkedin:hover .ri-linkedin-line::before {
   stroke: #0e76a8;
+  color: #0e76a8;
 }
 
 .github:hover {
   background: rgb(129, 129, 129);
 }
 
-.github:hover .feather-github {
+.github:hover .ri-github-line::before {
   stroke: var(--white);
 }
 

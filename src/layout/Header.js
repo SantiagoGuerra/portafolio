@@ -2,7 +2,7 @@ import { elementFromString } from '../utils/index';
 
 export default function Header(data) {
   const socialMediaHelper = data => {
-    const list = data.map(socialNetwork => `<li> <a href="${socialNetwork.url}" class="social-link ${socialNetwork.brand}" target="_BLANK"> <i class="ri-${socialNetwork.brand}-line"></i> </a> </li>`).join(' ');
+    const list = data.map(socialNetwork => `<li> <a href="${socialNetwork.url}" class="social-link ${socialNetwork.brand}" target="_BLANK"> <i class="ri-${socialNetwork.brand}-line ri-icon"></i> </a> </li>`).join(' ');
 
     console.log(list);
     return list;
