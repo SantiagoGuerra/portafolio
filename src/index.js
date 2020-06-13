@@ -5,6 +5,6 @@ import data from './data.json';
 import Header from './layout/Header';
 
 
-document.querySelector('.main').appendChild(Header(data.profile.info));
+document.querySelector('.main').insertAdjacentElement('beforebegin', Header(data.profile.info));
 
 console.log(Header(data.profile.info));

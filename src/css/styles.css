@@ -351,6 +351,8 @@ p, span, h1, h2, h3, h4, h5, h6, a {
 
 .message {
   margin-top: 60px;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 .message > h2 {
@@ -359,6 +361,65 @@ p, span, h1, h2, h3, h4, h5, h6, a {
 }
 
 .message > p { color: #ccc}
+
+.carousel {
+  /* background: gray; */
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;  
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+ 
+}
+
+.slides::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+.slides::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides > .slide {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  margin-right: 24px;
+  transform-origin: center center;
+  position: relative;
+  
+}
+
+.slide-pointers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+}
+.slide-point {
+  background: var(--red);
+  width: 12px;
+  height: 12px;
+  margin-left: 24px;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.slide-point:hover {
+  transform: scale(1.5, 1.5);
+}
 
 @media screen and (min-width: 720px) {
   
@@ -397,9 +458,13 @@ p, span, h1, h2, h3, h4, h5, h6, a {
     margin-left: 460px;
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
     width: 100%;
     padding: 24px 62px;
-    justify-content: space-between;
+  }
+
+  .message {
+    text-align: left;
   }
   .card {
     width: 360px;
