@@ -21,6 +21,14 @@ const config = {
           'css-loader',
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|woff|woff2|eot|ttf|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [

@@ -3,10 +3,17 @@
 *::before {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   color: var(--dark);
   line-height: 1.4;
+}
+
+p, span, h1, h2, h3, h4, h5, h6, a {
+  font-family: Poppins, 'sans-serif';
+}
+
+p, span, a {
+  font-weight: 200;
 }
 
 
@@ -41,6 +48,13 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
+}
+
+.ri-icon, .ri-icon::before{
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--dark);
+  
 }
 
 .feather-search {
@@ -156,6 +170,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 120px 12px;
   width: 100%;
@@ -182,7 +197,7 @@
 }
 
 .description {
-  margin-bottom: 43px;
+  margin-bottom: 28px;
   max-width: 350px;
   font-size: var(--f-base);
 }
@@ -204,29 +219,41 @@
   align-items: center;
   border-radius: var(--border-complete);
   transition: background .3s ease-in-out;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: var(--alt-red);
+}
+
+.social-link:hover .ri-icon::before{
+  color: var(--red);
 }
 
 .twitter:hover {
   background: rgba(29, 161, 242, 30%)
 }
 
-.twitter:hover .feather-twitter {
+.twitter:hover .ri-twitter-line::before {
   stroke: #1DA1F2;
+  color: #1DA1F2;
 }
 .linkedin:hover {
   background: #bbcfe2;
 }
 
-.linkedin:hover .feather-linkedin {
+.linkedin:hover .ri-linkedin-line::before {
   stroke: #0e76a8;
+  color: #0e76a8;
 }
 
 .github:hover {
   background: rgb(129, 129, 129);
 }
 
-.github:hover .feather-github {
+.github:hover .ri-github-line::before {
   stroke: var(--white);
+  color: var(--white);
 }
 
 .btn {
@@ -285,7 +312,8 @@
   display: flex;
   flex-direction: column;
   transition: top .3s ease-in-out;
-  top: 100%
+  top: 100%;
+  justify-content: space-between;
 }
 
 .card-content {
@@ -315,6 +343,7 @@
   border-top: .5px solid var(--gray);
   background: rgb(250, 250, 250);
   height: 100%;
+  max-height: 53px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -337,6 +366,8 @@
 
 .message {
   margin-top: 60px;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 .message > h2 {
@@ -345,6 +376,65 @@
 }
 
 .message > p { color: #ccc}
+
+.carousel {
+  /* background: gray; */
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;  
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+ 
+}
+
+.slides::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+.slides::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides > .slide {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  margin-right: 24px;
+  transform-origin: center center;
+  position: relative;
+  
+}
+
+.slide-pointers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+}
+.slide-point {
+  background: var(--red);
+  width: 12px;
+  height: 12px;
+  margin-left: 24px;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.slide-point:hover {
+  transform: scale(1.5, 1.5);
+}
 
 @media screen and (min-width: 720px) {
   
@@ -357,6 +447,7 @@
     left: 0;
     top: 0;
     height: 100vh;
+    min-height: 520px;
     padding-top: 60px;
     padding-bottom: 0px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 10%);
@@ -382,9 +473,13 @@
     margin-left: 460px;
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
     width: 100%;
     padding: 24px 62px;
-    justify-content: space-between;
+  }
+
+  .message {
+    text-align: left;
   }
   .card {
     width: 360px;
