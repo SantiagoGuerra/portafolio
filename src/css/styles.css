@@ -8,6 +8,10 @@
   line-height: 1.4;
 }
 
+p, span, h1, h2, h3, h4, h5, h6, a {
+  font-family: Montserrat, 'sans-serif';
+}
+
 
 :root {
   /* colors */
@@ -162,6 +166,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 120px 12px;
   width: 100%;
@@ -188,7 +193,7 @@
 }
 
 .description {
-  margin-bottom: 43px;
+  margin-bottom: 28px;
   max-width: 350px;
   font-size: var(--f-base);
 }
@@ -366,6 +371,7 @@
     left: 0;
     top: 0;
     height: 100vh;
+    min-height: 520px;
     padding-top: 60px;
     padding-bottom: 0px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 10%);
