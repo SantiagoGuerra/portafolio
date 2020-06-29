@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Container from '../container/Container';
 import AboutMe from '../components/AboutMe';
 import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Container>
         <AboutMe />
         <Projects />
+        <Contact />
       </Container>
 
       <style jsx>{`

@@ -172,17 +172,17 @@ const projectList = [{
         }
 
         .project-title__animate {
-          transition: all .3s .3s ease-in-out;
+          transition: all .3s .1s ease-in-out;
           transform: translateY(700%);
         }
 
         .project-subtitle__animate {
-          transition: all .3s .4s ease-in-out;
+          transition: all .3s .2s ease-in-out;
           transform: translateY(700%);
         }
 
         .project-description__animate {
-          transition: all .3s .5s ease-in-out;
+          transition: all .3s .4s ease-in-out;
           transform: translateY(700%);
         }
 
