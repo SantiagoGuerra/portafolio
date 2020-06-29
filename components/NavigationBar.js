@@ -40,6 +40,7 @@ const NavigationBar = () => {
           left: 0;
           height: 72px;
           background: #fff;
+          z-index: 9999;
         }
 
         .navigation-bar-container {
@@ -55,6 +56,7 @@ const NavigationBar = () => {
         ul {
           display: flex;
           list-style: none;
+          padding: 0;
         }
 
         li {

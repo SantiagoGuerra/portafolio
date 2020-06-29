@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Container from '../container/Container';
+import AboutMe from '../components/AboutMe';
 
 export default function Home() {
   return (
@@ -10,9 +11,7 @@ export default function Home() {
       </Head>      
 
       <Container>
-        <h2>
-          Index
-        </h2>
+        <AboutMe />
       </Container>
 
       <style jsx>{`
@@ -31,6 +30,8 @@ export default function Home() {
         *,
         *::before,
         *::after {
+          padding: 0;
+          margin: 0;
           box-sizing: border-box;
         }
 
@@ -39,6 +40,12 @@ export default function Home() {
           --font-fam: 'Poppins', sans-serif;
           --dark-color: #1C1B20;
           --main-color: #FC5957;
+        }
+
+        .container {
+          width: 100%;
+          margin: auto;
+          max-width: 1114px;
         }
       `}</style>
     </div>
