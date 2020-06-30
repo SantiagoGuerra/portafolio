@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import NavigationBar from '../components/NavigationBar';
+import Footer from '../components/Footer';
 
 const Container = (props) => {
 
@@ -11,9 +12,12 @@ const Container = (props) => {
       </Head>
 
       <NavigationBar />
-      <main>
-        {props.children}
-      </main>
+        <main>
+          {props.children}
+        </main>
+
+      <Footer/>
+
       
     </>
   )
