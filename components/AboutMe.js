@@ -4,12 +4,12 @@ const AboutMe = () => {
   return (
     <>
       <div id="about-me">
+      <Slide>
           <div className="container about-container">
             
               <p className="description">
               Throughout my life I have filled myself with knowledge related to the world of Software Development, whose knowledge I share every day in various projects. I am always willing to help and contribute to my team. My passions are mathemathics, UI/UX design and programming.</p>
              
-              <Slide>
               <h2>
                 <p>
                   I'M
@@ -18,12 +18,13 @@ const AboutMe = () => {
                   SANTIAGO GUERRA<span>.</span>
                 </p>
                 <p className="subtitle">
-                Full-stack Developer
-              </p>
+                  Full-stack Developer
+                </p>
+
               </h2>
               
-            </Slide>
         </div>
+        </Slide>
 
       </div>
       <style jsx>{`
@@ -81,25 +82,28 @@ const AboutMe = () => {
             font-size: 48px;
             line-height: 48px;
             max-width: 450px;
-
+            text-align: center;
           }
 
           .subtitle {
             font-size: 28px;
             line-height: 28px;
             margin-bottom: 24px;
+            color: var(--dark-gray-color)
           }
 
           .description {
             max-width: 450px;
-            color: var(--dark-color)
+            color: var(--dark-color);
+            text-align: center;
+            padding: 0;
           }
 
           .about-container {
             flex-direction: column-reverse;
-            padding: 24px;
             justify-content: center;
             overflow: hidden;
+            padding: 0;
           }
 
           .about-container::before {
