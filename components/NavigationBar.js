@@ -48,7 +48,7 @@ const NavigationBar = () => {
           height: 100%;
           width: 100%;
           margin: auto;
-          max-width: 1114px;
+          max-width: 1044px;
           justify-content: space-between;
           align-items: center;
         }
@@ -87,6 +87,12 @@ const NavigationBar = () => {
 
         a:hover::before {
           transform: translateX(0);
+        }
+
+        @media screen and (max-width: 1044px) {
+          .navigation-bar {
+            display: none
+          }
         }
       `}</style>
     </>

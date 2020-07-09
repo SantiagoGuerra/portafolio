@@ -1,3 +1,5 @@
+import Flip from 'react-reveal/Flip';
+
 const Projects = () => {
 
 const projectList = [{
@@ -58,12 +60,12 @@ const projectList = [{
   return (
     <>
     <div className="projects" id="projects">
-      <div className="container project-list-container">
+      <div className="project-list-container">
 
       <h2 className="projects-title">
         PROJECTS
       </h2>
-
+      <Flip left cascade>
       <div className="project-list">
       {projectList.map(project => {
           
@@ -99,7 +101,7 @@ const projectList = [{
         })}
         
       </div>
-        
+      </Flip>
       </div>
     </div>
 
@@ -139,7 +141,7 @@ const projectList = [{
         .project {
           background: var(--main-color);
           border: 2px solid #fff;
-          width: 362px;
+          width: 33%;
           height: 300px;
           position: relative;
           overflow: hidden;
@@ -232,6 +234,28 @@ const projectList = [{
           color: var(--main-color);
           font-family: var(--font-fam);
           margin-right: 32px;
+        }
+
+
+        
+
+        @media screen and (max-width: 1044px) {
+          .projects-title {
+            font-size: 38px
+          }
+
+          .project {
+            width: 50%;
+            
+          }
+        }
+
+        @media screen and (max-width: 720px) {
+          .project {
+            width: 100%;
+            border: none;
+            border-bottom: 4px solid #fff;
+          }
         }
       `}</style>
     </>

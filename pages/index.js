@@ -10,6 +10,7 @@ export default function Home() {
       <Head>
         <title>Santiago Portafolio | Full-stack Developer</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#FC5957" />
       </Head>      
 
       <Container>
@@ -51,11 +52,17 @@ export default function Home() {
         .container {
           width: 100%;
           margin: auto;
-          max-width: 1114px;
+          max-width: 1044px;
         }
 
         h2 {
           font-weight: 300;
+        }
+
+        @media screen and (max-width: 1044px) {
+          .container {
+            padding: 0px 12px;
+          }
         }
       `}</style>
     </div>

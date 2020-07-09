@@ -116,6 +116,25 @@ const Contact = () => {
           display: flex;
           justify-content: center;
         }
+
+
+        @media screen and (max-width: 1044px) {
+          .contact-title {
+            font-size: 38px
+          }
+
+          .form-container {
+            flex-direction: column;
+          }
+
+          .shape-container {
+            display: none;
+          }
+
+          form {
+            width: 100%;
+          }
+        }
       `}</style>
     </>
   )
