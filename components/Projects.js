@@ -1,4 +1,5 @@
 import Flip from 'react-reveal/Flip';
+import { v4 as uuidv4 } from 'uuid';
 
 const Projects = () => {
 
@@ -70,7 +71,7 @@ const projectList = [{
       {projectList.map(project => {
           
           return (
-          <div className="project">
+          <div className="project" key={uuidv4()}>
             <div className="project-reveal">
               <h2 className="project-title">
                 {project.title}
@@ -92,7 +93,7 @@ const projectList = [{
               </p>
 
               <div>
-                {project.links.map(link => <a href={`${link.href}`} className="link-animate">{link.name}</a>)}
+                {project.links.map(link => <a href={`${link.href}`} className="link-animate" key={uuidv4()} target="_blank">{link.name}</a>)}
               </div>
             </div>
           </div>

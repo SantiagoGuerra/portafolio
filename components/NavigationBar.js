@@ -90,8 +90,18 @@ const NavigationBar = () => {
         }
 
         @media screen and (max-width: 1044px) {
+
           .navigation-bar {
-            display: none
+            height: 52px;
+            background-color: var(--dark-color)
+          }
+
+          .navigation-bar-container {
+            justify-content: center;
+          }
+
+          ul {
+            display: none;
           }
         }
       `}</style>

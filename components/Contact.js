@@ -104,6 +104,12 @@ const Contact = () => {
           padding: 0;
           justify-content: center;
           border: none;
+          cursor: pointer;
+          transition: all .3s ease-in-out;
+        }
+
+        .btn:hover {
+          background: var(--dark-color)
         }
 
         .form-container {

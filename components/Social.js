@@ -5,23 +5,23 @@ const Social = () => {
     <ul>
 
       <li>
-          <a href="https://github.com/SantiagoGuerra">
+          <a href="https://github.com/SantiagoGuerra" target="_blank">
             <i className="ri-github-line"></i>
           </a>
         </li>
         
         <li>
-          <a href="https://twitter.com/dedalo_g">
+          <a href="https://twitter.com/dedalo_g" target="_blank">
             <i className="ri-twitter-line"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/santiago--guerra/">
+          <a href="https://www.linkedin.com/in/santiago--guerra/" target="_blank">
             <i className="ri-linkedin-line"></i>
           </a>
         </li>
         <li>
-          <a href="https://cdnfast.imfast.io/Full-stack_Developer_Resume.PDF">
+          <a href="https://cdnfast.imfast.io/Full-stack_Developer_Resume.PDF" target="_blank">
             <i className="ri-file-pdf-line"></i>
           </a>
         </li>
@@ -32,6 +32,7 @@ const Social = () => {
         display: flex;
         list-style: none;
         align-items: center;
+        z-index: 99
       }
 
       li {
@@ -61,6 +62,22 @@ const Social = () => {
 
       i:hover {
         color: var(--main-color)
+      }
+
+      @media screen and (max-width: 1044px) {
+        ul {
+          justify-content: space-evenly;
+          width: 100%;
+          max-width: 320px;
+        }
+
+        li {
+          margin: 0
+        }
+
+        i {
+          color: var(--main-color)
+        }
       }
     `}</style>
     </>

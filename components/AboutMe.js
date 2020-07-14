@@ -12,9 +12,6 @@ const AboutMe = () => {
              
               <h2>
                 <p>
-                  I'M
-                </p>
-                <p>
                   SANTIAGO GUERRA<span>.</span>
                 </p>
                 <p className="subtitle">
