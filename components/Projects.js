@@ -63,7 +63,7 @@ const projectList = [{
       href:'https://santiagoguerra.me/using-bootstrap/'
     },{
       name: "Source Code",
-      href: "https://github.com/SantiagoGuerra/to-do"
+      href: "https://github.com/SantiagoGuerra/using-bootstrap"
     }]
   },
 ]
