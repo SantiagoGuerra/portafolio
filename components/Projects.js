@@ -18,42 +18,52 @@ const projectList = [{
   ]
   },
   {
-    title: "Social Network",
-    subtitle: "Ruby on Rails App",
-    description: "A social network where you can share posts, receive likes and comments",
+    title: "Weather App",
+    subtitle: "REST API Application",
+    description: "Access current weather data for any location on Earth including over 200,000 cities!",
     links: [{
+      name: "Live Preview",
+      href: "http://awesome-weather-app.surge.sh/"
+    },
+    {
       name: "Source Code",
-      href: "#"
+      href: "https://github.com/SantiagoGuerra/weather-app"
     }]
   },
   {
-    title: "Social Network",
-    subtitle: "Ruby on Rails App",
-    description: "A social network where you can share posts, receive likes and comments",
+    title: "Endless Runner",
+    subtitle: "JavaScript Video Game",
+    description: "Using JavaScript to develop a fun video game where you can run and eat delicious apples.",
     links: [{
-      name: "Source Code",
-      href: "#"
-    }]
-  },
-  {
-    title: "Social Network",
-    subtitle: "Ruby on Rails App",
-    description: "A social network where you can share posts, receive likes and comments",
-    links: [{
-      name: "Source Code",
-      href: "#"
-    }]
-  },
-  {
-    title: "Social Network",
-    subtitle: "Ruby on Rails App",
-    description: "A social network where you can share posts, receive likes and comments",
-    links: [{
-      name: "Source Code",
-      href: "#"
+      name: "Live Preview",
+      href: "https://runner-js.netlify.app/"
     },{
       name: "Source Code",
-      href: "#"
+      href: "https://github.com/SantiagoGuerra/runner-js"
+    }]
+  },
+  {
+    title: "Task Manager",
+    subtitle: "JavaScript Application",
+    description: "Modularized using Webpack as a static module bundler and between other technologies.",
+    links: [{
+      name: "Live Preview",
+      href:'https://ivanderlich.github.io/to-do/'
+    },{
+      name: "Source Code",
+      href: "https://github.com/SantiagoGuerra/to-do"
+    }]
+  },
+  {
+    title: "Newsweek Clone",
+    subtitle: "CSS Project",
+    description: "Clone a website,I decided to clone the https://newsweek.com website (2019 Version)",
+    links: [{
+      name: "Live Preview",
+      href:'https://santiagoguerra.me/using-bootstrap/'
+    },{
+      name: "Source Code",
+      href: "https://github.com/SantiagoGuerra/to-do"
     }]
   },
 ]
