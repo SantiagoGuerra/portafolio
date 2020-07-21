@@ -9,11 +9,11 @@ const projectList = [{
     description: "A social network where you can share posts, receive likes and comments",
     links: [{
       name: "Source Code",
-      href: "#"
+      href: "https://github.com/gagc056/facebook-clone"
     },
     {
       name: "Live Version",
-      href: "#"
+      href: "https://peaceful-cove-83770.herokuapp.com/"
     }
   ]
   },
